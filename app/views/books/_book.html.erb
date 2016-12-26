@@ -1,0 +1,11 @@
+  <div class="col-md-3">
+    <div class="thumbnail">
+        <%= link_to book_path(book) do %>
+            <%= image_tag "book.jpg", class: "img-responsive" %>
+        <% end %>
+    </div>
+    <div class="caption">
+        <p><strong><%= book.name %></strong></p>
+        <p><%= book.price.to_f / 100 %></p>
+    </div>
+  </div>
