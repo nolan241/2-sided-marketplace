@@ -1,15 +1,18 @@
-<%= simple_form_for(@book) do |f| %>
+<%= simple_form_for(@book, html: {class: "form-signin"}) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :author %>
-    <%= f.input :description %>
-    <%= f.input :price %>
-    <%= f.input :availability %>
-  </div>
+  <%= f.input :name, required: true, label: false, placeholder: "Name", input_html: { class: "form-control"} %>
+  <%= f.input :author, required: true, label: false, placeholder: "Author", input_html: { class: "form-control"} %>
+  <%= f.input :description, required: true, label: false, placeholder: "description", input_html: { class: "form-control"}, rows: 5 %>
+  <%= f.input :price, required: true, label: false, placeholder: "price", input_html: { class: "form-control"} %>
+
+  <div class="checkbox text-center">
+    <p>Availability</p>
+    <%= f.input :availability, required: false, label: false %>
+  </div>   
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: "btn btn-primary btn-block" %>
   </div>
+  
 <% end %>
