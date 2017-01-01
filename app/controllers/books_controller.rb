@@ -42,6 +42,9 @@ class BooksController < ApplicationController
   # PATCH/PUT /books/1
   # PATCH/PUT /books/1.json
   def update
+      #cancan method that looks to models>ability to determine user authorization for updating a book
+      authorize! :manage, @book
+      
     respond_to do |format|
       if @book.update(book_params)
         format.html { redirect_to @book, notice: 'Book was successfully updated.' }
