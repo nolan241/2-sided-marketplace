@@ -50,5 +50,6 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 gem 'simple_form'
 gem 'devise'
 gem 'cancan'
-gem 'paperclip'
+gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'dotenv-rails', groups: [:development]
+gem 'aws-sdk', '< 2.0'
