@@ -24,6 +24,7 @@ module Workspace
     config.active_record.raise_in_transactional_callbacks = true
     config.paperclip_defaults = { 
         storage: :s3,
+        #s3_host_name: "",
         s3_credentials:{
             bucket: ENV['AWS_BUCKET'],
             access_key_id: ENV['AWS_ACCESS_KEY_ID'],
